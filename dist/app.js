@@ -1,8 +1,3 @@
-// Notes:
-// Use this script for development purpose only. 
-// For production stage you may need some additional configurations.
-// See the docs here https://vuejs.org/v2/guide/installation.html#Development-vs-Production-Mode
-
 const app = new Vue({
   el: "#app",
   data() {
