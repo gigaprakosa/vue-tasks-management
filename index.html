@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue Tasks Management | @gigaprakosa</title>
+
+	<link rel="stylesheet" href="dist/app.css">
+</head>
+<body>
+	<div id="app">
+	  <h2>Tasks Management</h2>
+
+	  <form @submit.prevent="addTask">
+	    <input placeholder="Write down your task.." v-model="task" />
+	    <button>Add Task</button>
+	  </form>
+
+
+	  <p>Tasks List:</p>
+	  <ul>
+	    <li v-for="(task, index) in tasks" :key="index">
+	      <span> {{ task }} </span>
+	      <button @click="removeTask(task)">done</button>
+	    </li>
+	  </ul>
+	  <hr/>
+
+	  <p>Tasks Done:</p>
+	  <ul>
+	    <li v-for="(task, index) in tasksDone" :key="index">
+	      <del> {{ task }} </del>
+	    </li>
+	  </ul>
+	  <hr/>
+
+	  <small>Fork it on <a href="https://github.com/gigaprakosa/vue-tasks-management" target="_blank">GitHub</a></small>
+	</div>
+	
+	<script src="https://cdn.jsdelivr.net/npm/vue@latest/dist/vue.js"></script>
+	<script src="dist/app.js"></script>
+</body>
+</html>
